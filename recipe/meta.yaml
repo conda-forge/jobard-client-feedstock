@@ -1,5 +1,5 @@
 {% set name = "jobard-client" %}
-{% set version = "1.4.1" %}
+{% set version = "1.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://gitlab.ifremer.fr/jobard/jobard_client/-/archive/{{ version }}/jobard_client-{{ version }}.tar.gz
-  sha256: e0e805d3de31fdd4e5f6033a1a9c369e639255a9621d6b3efe105f4aebd54910
-  
+  sha256: a5a5547e40cc42a97ef593eb5c78b6fb67c740fbce82924f85083b0b78b25dd1
+
 build:
   script_env:
-   - POETRY_DYNAMIC_VERSIONING_BYPASS={{ version }}
-  script: 
-   - {{ PYTHON }} -m pip install . -vv
-  number: 1
+    - POETRY_DYNAMIC_VERSIONING_BYPASS={{ version }}
+  script:
+    - {{ PYTHON }} -m pip install . -vv
+  number: 0
   noarch: python
   entry_points:
     - jobard-client = jobard_client.cli.application:main
@@ -33,7 +33,7 @@ requirements:
     - click >=8.0.2
     - tabulate >=0.8.9,<0.9
     - pandas >=1.5,<2.0
-    
+
 test:
   imports:
     - jobard_client
