@@ -1,5 +1,6 @@
 {% set name = "jobard-client" %}
-{% set version = "1.5.2" %}
+{% set version = "1.5.5" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://gitlab.ifremer.fr/jobard/jobard_client/-/archive/{{ version }}/jobard_client-{{ version }}.tar.gz
-  sha256: 8a6f3a6cae4dc0aa1e641daef469e6d0c475d52355c11a9cfae06bb28338bd3d
+  sha256: 434ee801415a8f0a761dd65193c6ef8105b5b234527d9b83d283f20aab9ef377
 
 build:
   script_env:
@@ -21,15 +22,15 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >={{ python_min }}
     - pip
     - poetry-core
     - poetry-dynamic-versioning
 
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - requests >=2.26.0,<2.30
-    - pydantic >=1.8.2,<1.9
+    - pydantic >=2,<3
     - click >=8.0.2
     - tabulate >=0.8.9,<0.9
     - pandas >=1.5,<2.0
