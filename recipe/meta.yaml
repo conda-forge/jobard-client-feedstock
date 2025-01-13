@@ -1,5 +1,6 @@
 {% set name = "jobard-client" %}
 {% set version = "1.5.5" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -21,15 +22,15 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >={{ python_min }}
     - pip
     - poetry-core
     - poetry-dynamic-versioning
 
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - requests >=2.26.0,<2.30
-    - pydantic >=1.8.2,<1.9
+    - pydantic >=2,<3
     - click >=8.0.2
     - tabulate >=0.8.9,<0.9
     - pandas >=1.5,<2.0
