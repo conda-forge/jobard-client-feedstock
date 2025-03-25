@@ -15,7 +15,7 @@ build:
     - POETRY_DYNAMIC_VERSIONING_BYPASS={{ version }}
   script:
     - {{ PYTHON }} -m pip install . -vv
-  number: 3
+  number: 4
   noarch: python
   entry_points:
     - jobard-client = jobard_client.cli.application:main
@@ -30,7 +30,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - requests >=2.32.3
-    - pydantic >=2.10,<3.0
+    - pydantic >=2.9,<3.0
 
 test:
   imports:
