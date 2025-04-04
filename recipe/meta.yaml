@@ -1,5 +1,5 @@
 {% set name = "jobard-client" %}
-{% set version = "1.5.5" %}
+{% set version = "1.5.6" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://gitlab.ifremer.fr/jobard/jobard_client/-/archive/{{ version }}/jobard_client-{{ version }}.tar.gz
-  sha256: 434ee801415a8f0a761dd65193c6ef8105b5b234527d9b83d283f20aab9ef377
+  sha256: ba06cc609c394fd59d695789cf254f8419ab2b3bd883857017f8ba7dba0b8265
 
 build:
   script_env:
     - POETRY_DYNAMIC_VERSIONING_BYPASS={{ version }}
   script:
     - {{ PYTHON }} -m pip install . -vv
-  number: 4
+  number: 0
   noarch: python
   entry_points:
     - jobard-client = jobard_client.cli.application:main
