@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://gitlab.ifremer.fr/jobard/jobard_client/-/archive/{{ version }}/jobard_client-{{ version }}.tar.gz
-  sha256: 662dbf820e060d747fbb3531519ca1853d8210e12351af37a4fac412cb2e68bb
+  sha256: 1c6f4d4abbf2a568020b136273a3a04dbd803c758620270497845209589930d2
 
 build:
   script_env:
