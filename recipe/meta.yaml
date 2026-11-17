@@ -1,5 +1,5 @@
 {% set name = "jobard-client" %}
-{% set version = "1.7.1" %}
+{% set version = "1.8.0" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://gitlab.ifremer.fr/jobard/jobard_client/-/archive/{{ version }}/jobard_client-{{ version }}.tar.gz
-  sha256: b52600999636f2a41591d806706a9692481bd2deb47a3d0258e35a4a562b98c1
+  sha256: 78583d5a8a98ced3f92ee984d24295c4552c4a9b0c979ff2707abe10318a5f71
 
 build:
   script_env:
